@@ -13,7 +13,7 @@
 
 \usepackage{pstricks}
 
-\usepackage{fontawesome}
+\usepackage{fontawesome5}
 \RequirePackage{tikz}
 \RequirePackage{xcolor}
 \RequirePackage[absolute,overlay]{textpos}
@@ -217,7 +217,7 @@
       \ifthenelse{\equal{\cvmail}{}}{}{
             {$
               \begin{array}{l}
-              \hspace{2.5mm} \huge \textnormal{\textcolor{yt}{\faEnvelopeO}}
+              \hspace{2.5mm} \huge \textnormal{\textcolor{yt}{\faEnvelope}}
               \end{array}
               $} 
             & \href{mailto:\cvmail}{\cvmail} \\}
