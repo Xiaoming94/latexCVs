@@ -13,6 +13,7 @@
 
 \usepackage{pstricks}
 
+\usepackage{graphicx}
 \usepackage{fontawesome5}
 \RequirePackage{tikz}
 \RequirePackage{xcolor}
@@ -142,9 +143,11 @@
 \newcommand{\cvmail}[1]{\renewcommand{\cvmail}{#1}}
 \newcommand{\cvnumberphone}[1]{\renewcommand{\cvnumberphone}{#1}}
 \newcommand{\cvaddress}[1]{\renewcommand{\cvaddress}{#1}}
-\newcommand{\cvsite}[1]{\renewcommand{\cvsite}{#1}}
+\newcommand{\cvsite@val}{}
+\newcommand{\cvsite}[1]{\renewcommand{\cvsite@val}{#1}}
 \newcommand{\aboutme}[1]{\renewcommand{\aboutme}{#1}}
-\newcommand{\profilepic}[1]{\renewcommand{\profilepic}{#1}}
+\newcommand{\profilepic@val}{}
+\newcommand{\profilepic}[1]{\renewcommand{\profilepic@val}{#1}}
 \newcommand{\cvname}[1]{\renewcommand{\cvname}{#1}}
 \newcommand{\cvjobtitle}[1]{\renewcommand{\cvjobtitle}{#1}}
 
@@ -186,6 +189,15 @@
     %------------------------------------------------
     
         \vspace{4mm}
+    \ifthenelse{\equal{\profilepic@val}{}}{}{
+        \begin{center}
+            \begin{tikzpicture}
+                \clip (0,0) circle (1.5cm);
+                \node at (0,0) {\includegraphics[width=3cm]{\profilepic@val}};
+            \end{tikzpicture}
+        \end{center}
+        \vspace{2mm}
+    }
     {\Huge\color{pblue}\cvname}
     
     \vspace{2mm}
@@ -207,13 +219,13 @@
               $} 
             & \cvnumberphone\\}
             
-      \ifthenelse{\equal{\href{\cvsite}{\cvsite}}{}}{}{
+      \ifthenelse{\equal{\cvsite@val}{}}{}{
             {$
               \begin{array}{l}
               \hspace{2.8mm} \huge \textnormal{\textcolor{test}{\faGlobe}}
               \end{array}
-              $} 
-            & \href{http://\cvsite}{\cvsite} \\}
+              $}
+            & \href{http://\cvsite@val}{\cvsite@val} \\}
       \ifthenelse{\equal{\cvmail}{}}{}{
             {$
               \begin{array}{l}
