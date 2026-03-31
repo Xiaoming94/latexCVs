@@ -15,6 +15,7 @@
 
 \usepackage{graphicx}
 \usepackage{fontawesome5}
+\usepackage{lipsum}
 \RequirePackage{tikz}
 \RequirePackage{xcolor}
 \RequirePackage[absolute,overlay]{textpos}
@@ -167,10 +168,14 @@
 		\end{tikzpicture}
 	}
 }
-\newcommand\education[1]{ 
+\newcommand\education[1]{
 	\renewcommand{\education}{
 		{#1}
 	}
+}
+
+\newcommand{\educationitem}[2]{%
+	#1 & \parbox[t]{0.83\textwidth}{#2}\\
 }
 
 %----------------------------------------------------------------------------------------
@@ -268,9 +273,6 @@
 		 \programming
          
         \vspace{3mm}
-        \profilesection{Education}{3cm} 
-        
-        \education
       
   \end{textblock}
 }
