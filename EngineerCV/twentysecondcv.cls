@@ -1,5 +1,5 @@
 \ProvidesClass{twentysecondcv}[2015/02/28 CV class]
-\LoadClass{article}
+\LoadClass[9pt]{extarticle}
 \NeedsTeXFormat{LaTeX2e}
 
 %----------------------------------------------------------------------------------------
@@ -16,6 +16,7 @@
 \usepackage{graphicx}
 \usepackage{fontawesome5}
 \usepackage{lipsum}
+\usepackage[most]{tcolorbox}
 \RequirePackage{tikz}
 \RequirePackage{xcolor}
 \RequirePackage[absolute,overlay]{textpos}
@@ -152,6 +153,19 @@
 \newcommand{\cvname}[1]{\renewcommand{\cvname}{#1}}
 \newcommand{\cvjobtitle}[1]{\renewcommand{\cvjobtitle}{#1}}
 
+% Printing Skilltag to show tools used for a specific assignment or work
+\newtcbox{\skilltag}{
+    nobeforeafter,
+    tcbox raise base,
+    enhanced,
+    boxrule=0pt,
+    frame hidden,
+    top=2pt, bottom=2pt, left=4pt, right=4pt,
+    arc=2pt,
+    colback=maingray!40,
+    coltext=darkgray,
+    fontupper=\footnotesize
+}
 % Command for printing the contact information icons
 \newcommand*\icon[1]{\tikz[baseline=(char.base)]{\node[shape=circle,draw,inner sep=1pt, fill=mainblue,mainblue,text=white] (char) {#1};}}
 
