@@ -160,9 +160,9 @@
     enhanced,
     boxrule=0pt,
     frame hidden,
-    top=2pt, bottom=2pt, left=4pt, right=4pt,
+    top=1pt, bottom=1pt, left=3pt, right=3pt,
     arc=2pt,
-    colback=maingray!40,
+    colback=maingray!25,
     coltext=darkgray,
     fontupper=\footnotesize
 }
@@ -190,6 +190,16 @@
 
 \newcommand{\educationitem}[2]{%
 	#1 & \parbox[t]{0.83\textwidth}{#2}\\
+}
+
+\newcommand\languages[1]{
+  \renewcommand{\languages}{
+    {#1}
+  }
+}
+
+\newcommand\languageitem[2]{
+  \textbf{#1} & #2\\
 }
 
 %----------------------------------------------------------------------------------------
@@ -287,7 +297,10 @@
 		 \programming
          
         \vspace{3mm}
-      
+  
+  \profilesection{Languages}{1.2cm}
+
+    \languages
   \end{textblock}
 }
 
