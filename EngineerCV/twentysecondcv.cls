@@ -1,5 +1,5 @@
 \ProvidesClass{twentysecondcv}[2015/02/28 CV class]
-\LoadClass[9pt]{extarticle}
+\LoadClass[10pt]{extarticle}
 \NeedsTeXFormat{LaTeX2e}
 
 %----------------------------------------------------------------------------------------
@@ -29,7 +29,7 @@
 \RequirePackage{parskip}
 
 \usepackage{enumitem}
-\setlist[itemize]{leftmargin=*}
+\setlist[itemize]{leftmargin=*, topsep=0pt, parsep=0pt, itemsep=0pt}
 
 \RequirePackage[hidelinks]{hyperref}
 \hypersetup{
@@ -194,7 +194,9 @@
 
 \newcommand\languages[1]{
   \renewcommand{\languages}{
-    {#1}
+    \begin{tabular}{r @{\hspace{2pt}$\cdot$\hspace{2pt}} l}
+      #1
+    \end{tabular}
   }
 }
 
@@ -292,11 +294,11 @@
         
         \vspace{3mm}
        
-	 {\large \textbf{Programming}} 
+	{\large \textbf{Programming}} 
 
-		 \programming
+	\programming
          
-        \vspace{3mm}
+    \vspace{3mm}
   
   \profilesection{Languages}{1.2cm}
 
@@ -369,7 +371,7 @@
 		{\footnotesize#4}%
         }\\%
     #2&\parbox[t]{0.83\textwidth}{%
-		\ifblank{#5}{}{#5 \\}
+		\ifblank{#5}{}{#5\\}
 		#6%
 	}\\
 }

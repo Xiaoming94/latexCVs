@@ -35,17 +35,31 @@
 }
 
 % Programming skill bars
-\programming{{C $\textbullet$ C++  $\textbullet$ R / 3}, {JavaScript $\textbullet$ SQL $\textbullet$ \large \LaTeX / 3.5}, {Scala $\textbullet$ Java $\textbullet$ Python / 5}}
+%\programming{{C $\textbullet$ C++  $\textbullet$ R / 3}, {JavaScript $\textbullet$ SQL $\textbullet$ \large \LaTeX / 3.5}, {Scala $\textbullet$ Java $\textbullet$ Python / 5}}
+\renewcommand{\programming}{
+    \textbf{Languages}
+    \begin{itemize}
+        \item C++
+        \item Java
+        \item Python
+        \item Rust
+        \item Bash/Shell scripting
+    \end{itemize}
+    \textbf{Tools}
+    \begin{itemize}
+        \item Editors: Vim/Neovim, VSCode
+        \item Git
+        \item Platforms: Linux, Unix, Docker, LXC
+    \end{itemize}
+}
 
 % Languages
 \languages{
-    \begin{tabular}{r @{\hspace{2pt}$\cdot$\hspace{2pt}} l}
-        \languageitem{Chinese (Mandarin)}{Native}
-        \hline
-        \languageitem{Swedish}{Native}
-        \hline
-        \languageitem{English}{Fluent}
-    \end{tabular}
+    \languageitem{Chinese (Mandarin)}{Native}
+    \hline
+    \languageitem{Swedish}{Native}
+    \hline
+    \languageitem{English}{Fluent}
 }
 
 % Projects text
@@ -69,6 +83,7 @@
 \begin{document}
 
 \makeprofile % Print the sidebar
+\small
 
 %----------------------------------------------------------------------------------------
 %    ABOUT ME
@@ -94,27 +109,26 @@ He is always up for sharing his knowledge with his fellow colleagues to help the
         {2021 -}
         {Ongoing}
         {Consultant}
-        {\href{https://nexergroup.com/sv/}{Nexer Engineering}}
-        {}
-        {
-            Nexer Engineering is a division of the Nexer group consultant company.
-            Through Nexer, Henry started his assignment at Ericsson as a C++ developer for the radio base stations.
-            Apart from working with 
+        {\href{https://nexergroup.com/sv/}{Nexer Engineering 1 AB}}
+        {\scriptsize Employee}
+        {\small
+            Consultant company that is part of the larger Nexer Group AB.
+            Henry got his assignment at Ericsson from here.
+            
+            Henry also engages in extra curricular activities at Nexer.
+            Notably, he created study material for the programming language rust.
+            He also held introductory presentation and workshop for to help people get started with this programming language.
         }\\
 
 \twentyitem
         {2021 -}
         {Ongoing}
-        {RBS Feature developer}
+        {SW Developer}
         {\href{https://ericsson.com}{Ericsson AB}}
-        {}
-        {
-            Some text\\
-
-            \skilltag{C++} \skilltag{linux} \skilltag{googletest} \skilltag{java} \skilltag{bash} \skilltag{moshell}
-        }
-
-
+        {\scriptsize Assignment}
+        {\small
+            \skilltag{C++} \skilltag{linux} \skilltag{googletest} \skilltag{java} \skilltag{bash} \skilltag{moshell} \skilltag{CI/CD} \skilltag{Integration Testing}
+        }\\
 
 	%\twentyitem{<dates>}{<title>}{<location>}{<description>}
 \end{twenty}
