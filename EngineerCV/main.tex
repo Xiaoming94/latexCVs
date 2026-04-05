@@ -21,37 +21,58 @@
 
 % Command for printing skill overview bubbles
 \newcommand\skills{
+    { \large \textbf{Programming} }
     \begin{itemize}
-        \item Neovim
-        \item Linux
+        \item C++
+        \item Rust
+        \item Java
+        \item Python
+        \item Bash/Shell scripting
+    \end{itemize}
+    { \large \textbf{Tools and platforms}}
+    \begin{itemize}
+        \item Editor: Vim, Neovim, VSCode
+        \item Git
+        \item Gdb (debugger)
+        \item Linux, Unix
+        \item Docker, LXC, Incus
+        \item Build tools: Gradle, Cargo, Meson, CMAKE
+        \item Research and AI: Scipy, Keras, Jupyter
     \end{itemize}
 }
 
 \education{
 \begin{twenty}
-    \educationitem{2017 - 2021}{\textbf{MSc. in Complex Adaptive Systems} \\ Chalmers University of Technology \\ \textit{Gothenburg, Sweden}}\\
-    \educationitem{2013 - 2017}{\textbf{Information Technology and Software Engineering} \\ Chalmers University of Technology \\ \textit{Gothenburg, Sweden}}
+    \educationitem{2017 - 2021}{\textbf{MSc. in Complex Adaptive Systems} \\
+            Chalmers University of Technology \\
+            \textit{Gothenburg, Sweden} \\
+        \textit{Thesis: Deep Learning with Ensembles of Neural Networks}}\\
+    \educationitem{2013 - 2017}{\textbf{Information Technology and Software Engineering} \\
+            Chalmers University of Technology \\
+            \textit{Gothenburg, Sweden}}
 \end{twenty}
 }
 
 % Programming skill bars
 %\programming{{C $\textbullet$ C++  $\textbullet$ R / 3}, {JavaScript $\textbullet$ SQL $\textbullet$ \large \LaTeX / 3.5}, {Scala $\textbullet$ Java $\textbullet$ Python / 5}}
-\renewcommand{\programming}{
-    \textbf{Languages}
-    \begin{itemize}
-        \item C++
-        \item Java
-        \item Python
-        \item Rust
-        \item Bash/Shell scripting
-    \end{itemize}
-    \textbf{Tools}
-    \begin{itemize}
-        \item Editors: Vim/Neovim, VSCode
-        \item Git
-        \item Platforms: Linux, Unix, Docker, LXC
-    \end{itemize}
-}
+%\renewcommand{\programming}{
+%    \textbf{Languages}
+%    \begin{itemize}
+%        \item C++
+%        \item Java
+%        \item Python
+%        \item Rust
+%        \item Bash/Shell scripting
+%    \end{itemize}
+%    \textbf{Tools}
+%    \begin{itemize}
+%        \item Editors: Vim/Neovim, VSCode
+%        \item Git
+%        \item Platforms: Linux, Unix, Docker, LXC
+%        \item Research and AI: Scipy, Keras, Jupyter
+%        \item asdasdasd
+%    \end{itemize}
+%}
 
 % Languages
 \languages{
@@ -131,10 +152,26 @@ He is always up for sharing his knowledge with his fellow colleagues to help the
                 \item Contributed to the high-level design and development of fault handling in NG-OLLS (Ericsson's ORAN solution).
                 \item Contributed to features in DU capacity, HWAC handling, and radio antenna calibration.
                 \item Worked in an agile team using that employed Test-Driven Development.
-                \item Added CI/CD integration test to verify and guard the developed features.\\
+                \item Added unittests and integration test to CI/CD pipeline for verifying and guard the developed features.\\
             \end{itemize}
             \skilltag{C++} \skilltag{linux} \skilltag{googletest} \skilltag{java} \skilltag{bash} \skilltag{moshell} \skilltag{CI/CD}
-            \skilltag{Test Driven Development} \skilltag{OOP} \skilltag{agile}
+            \skilltag{Test Driven Development} \skilltag{OOP} \skilltag{agile} \skilltag{JUnit5} \skilltag{Flowcharts}
+            \skilltag{Sequence Diagrams} \skilltag{state machines}
+        }\\
+
+\twentyitem
+        {2017}
+        {}
+        {Committee member of digIT}
+        {\href{https://digit.chalmers.it}{Chalmers IT student union division}}
+        {\scriptsize Extra curricular}
+        {\small
+                \begin{itemize}
+                        \item Managed and maintained the student union IT division website \href{https://chalmers.it}{chalmers.it}.
+                        \item Managed, maintained, developed and deployed services for the IT-students.
+                        \item Took part in moving services deployed inside a monolith VM to docker.
+                \end{itemize}
+                \skilltag{docker} \skilltag{linux} \skilltag{lxc}
         }
 
 	%\twentyitem{<dates>}{<title>}{<location>}{<description>}
@@ -152,6 +189,9 @@ He is always up for sharing his knowledge with his fellow colleagues to help the
 %----------------------------------------------------------------------------------------
 
 \section{Publications}
-L. Antonie, H. Gadgil, G. Grewal, and K. Inwood, “Historical Data Integration - A Study of WWI Canadian Soldiers,” in 2016 IEEE 16th International Conference on Data Mining Workshops (ICDMW), pp. 186-193, IEEE, 2016. \vspace{2mm}
+H. Linander, O. Balabanov, H. Yang, and B. Mehlig, "Looking at the
+posterior: accuracy and uncertainty of neural-network predictions,"
+\textit{Machine Learning: Science and Technology}, vol. 4, no. 4, p.
+045032, IOP Publishing, 2023.\vspace{2mm}
 
 \end{document}

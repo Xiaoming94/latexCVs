@@ -286,17 +286,20 @@
     \vspace{3mm}
     \profilesection{Technical Skills}{1.2cm}
 
-    {\large \textbf{Overview}}
-
-	\skills
-
         %------------------------------------------------
 
-        \vspace{3mm}
+    \vspace{3mm}
 
-	{\large \textbf{Programming}}
+    \skills
 
-	\programming
+    %{\large \textbf{Programming}}
+
+	%\programming
+    %
+    %{\large \textbf{Overview}}
+
+	%\skills
+
 
     \vspace{3mm}
 
