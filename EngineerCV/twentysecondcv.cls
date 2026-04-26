@@ -223,8 +223,8 @@
     \ifthenelse{\equal{\profilepic@val}{}}{}{
         \begin{center}
             \begin{tikzpicture}
-                \clip (0,0) circle (1.5cm);
-                \node at (0,0) {\includegraphics[width=3cm]{\profilepic@val}};
+                \clip (0,0) circle (2.0cm);
+                \node at (0,-0.4cm) {\includegraphics[width=4.0cm]{\profilepic@val}};
             \end{tikzpicture}
         \end{center}
         \vspace{2mm}
