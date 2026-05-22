@@ -27,6 +27,7 @@
 \RequirePackage{pgffor}
 \RequirePackage{marvosym}
 \RequirePackage{parskip}
+\RequirePackage{array}
 
 \usepackage{enumitem}
 \setlist[itemize]{leftmargin=*, topsep=0pt, parsep=0pt, itemsep=0pt}
@@ -241,11 +242,11 @@
 
     \vspace{3mm}
     \renewcommand{\arraystretch}{2}
-    \begin{tabular}{p{1cm} @{\hskip 0.5cm}p{5cm}}
+    \begin{tabular}{>{\centering\arraybackslash}p{1cm} @{\hskip 0.5em}p{5cm}}
       \ifthenelse{\equal{\cvnumberphone}{}}{}{
       		{$
               \begin{array}{l}
-              \hspace{4mm} \Huge \textnormal{\faMobile}
+              \large \textnormal{\faMobile}
               \end{array}
               $}
             & \cvnumberphone\\}
@@ -253,29 +254,28 @@
       \ifthenelse{\equal{\cvsite@val}{}}{}{
             {$
               \begin{array}{l}
-              \hspace{2.8mm} \huge \textnormal{\textcolor{test}{\faGlobe}}
+              \huge \textnormal{\textcolor{test}{\faGlobe}}
               \end{array}
               $}
             & \href{http://\cvsite@val}{\cvsite@val} \\}
       \ifthenelse{\equal{\cvmail}{}}{}{
             {$
               \begin{array}{l}
-              \hspace{2.5mm} \huge \textnormal{\textcolor{yt}{\faEnvelope}}
+              \small \textnormal{\faEnvelope}
               \end{array}
               $}
             & \href{mailto:\cvmail}{\cvmail} \\}
-
        \ifthenelse{\equal{\cvlinkedin}{}}{}{
             {$
               \begin{array}{l}
-              \hspace{3mm} \huge \textnormal{\textcolor{linkedin}{\faLinkedin}}
+              \small \textnormal{\textcolor{linkedin}{\faLinkedin}}
               \end{array}
               $} & \href{https://www.linkedin.com\cvlinkedin}{\cvlinkedin} \\
             }
         \ifthenelse{\equal{\cvgithub}{}}{}{
             {$
               \begin{array}{l}
-              \hspace{3mm} \huge \textnormal{\faGithub}
+              \small \textnormal{\faGithub}
               \end{array}
               $} & \href{https://www.github.com/\cvgithub}{\cvgithub} \\
             }
